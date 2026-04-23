@@ -258,9 +258,9 @@ export const translations = {
         {
           name: "MicroID Lab — Harvard HSIL",
           tag: "Saúde × IA · Competição Global",
-          problem: "Diagnóstico de patógenos é inacessível em regiões de baixa infraestrutura, enquanto sistemas de saúde globais carecem de infraestrutura diagnóstica escalável.",
-          solution: "Microscopia portátil + visão computacional para identificação rápida e acessível — a plataforma com IA que venceu o Harvard HSIL Brasil e segue para o Mundial.",
-          impact: "1º lugar Brasil • Top 120 equipes mundiais • Foco em clínicas brasileiras desassistidas.",
+          problem: "Acesso a diagnósticos rápidos e acessíveis ainda é um gargalo para a saúde global.",
+          solution: "Uma solução de diagnóstico com IA — detalhes em sigilo até a proteção de propriedade intelectual.",
+          impact: "1º lugar Brasil • Top 120 equipes mundiais • Indo para o Mundial.",
         },
         {
           name: "Solana Build",
