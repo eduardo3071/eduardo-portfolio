@@ -78,18 +78,11 @@ export const translations = {
       impact: "Impact",
       list: [
         {
-          name: "MicroID Lab",
-          tag: "Health × AI",
-          problem: "Pathogen diagnosis is inaccessible in low-infrastructure regions.",
-          solution: "Portable microscopy + computer vision for fast, affordable ID.",
-          impact: "Targeting clinics in underserved Brazilian regions.",
-        },
-        {
-          name: "Harvard HSIL Project",
-          tag: "Global Competition",
-          problem: "Global health systems need scalable diagnostic infrastructure.",
-          solution: "AI-driven platform — winning entry, headed to World Finals.",
-          impact: "1st place Brazil • Top 120 teams worldwide.",
+          name: "MicroID Lab — Harvard HSIL",
+          tag: "Health × AI · Global Competition",
+          problem: "Pathogen diagnosis is inaccessible in low-infrastructure regions, while global health systems lack scalable diagnostic infrastructure.",
+          solution: "Portable microscopy + computer vision for fast, affordable pathogen ID — the AI-driven platform that won Harvard HSIL Brazil and is heading to the World Finals.",
+          impact: "1st place Brazil • Top 120 teams worldwide • Targeting underserved Brazilian clinics.",
         },
         {
           name: "Solana Build",
@@ -113,19 +106,19 @@ export const translations = {
       titleAccent: "right now.",
       items: [
         {
-          title: "MicroID Lab",
-          desc: "AI-powered portable diagnostics for low-infrastructure regions.",
-          status: "ACTIVE",
-        },
-        {
-          title: "Harvard HSIL → World Finals",
-          desc: "Representing Brazil at the global stage in 2026.",
+          title: "MicroID Lab → World Finals",
+          desc: "AI-powered portable diagnostics — winning Harvard HSIL entry, now heading to the global stage.",
           status: "COMPETING",
         },
         {
           title: "START SP Pre-Incubation",
           desc: "Validating product-market fit inside SP's accelerator.",
           status: "BUILDING",
+        },
+        {
+          title: "Solana Builds",
+          desc: "Shipping high-throughput dApp experiments on mainnet.",
+          status: "ACTIVE",
         },
       ],
     },
@@ -235,18 +228,11 @@ export const translations = {
       impact: "Impacto",
       list: [
         {
-          name: "MicroID Lab",
-          tag: "Saúde × IA",
-          problem: "Diagnóstico de patógenos é inacessível em regiões de baixa infraestrutura.",
-          solution: "Microscopia portátil + visão computacional para identificação rápida e acessível.",
-          impact: "Foco em clínicas de regiões brasileiras desassistidas.",
-        },
-        {
-          name: "Projeto Harvard HSIL",
-          tag: "Competição Global",
-          problem: "Sistemas de saúde globais precisam de infraestrutura diagnóstica escalável.",
-          solution: "Plataforma com IA — projeto vencedor, indo para o Mundial.",
-          impact: "1º lugar Brasil • Top 120 equipes mundiais.",
+          name: "MicroID Lab — Harvard HSIL",
+          tag: "Saúde × IA · Competição Global",
+          problem: "Diagnóstico de patógenos é inacessível em regiões de baixa infraestrutura, enquanto sistemas de saúde globais carecem de infraestrutura diagnóstica escalável.",
+          solution: "Microscopia portátil + visão computacional para identificação rápida e acessível — a plataforma com IA que venceu o Harvard HSIL Brasil e segue para o Mundial.",
+          impact: "1º lugar Brasil • Top 120 equipes mundiais • Foco em clínicas brasileiras desassistidas.",
         },
         {
           name: "Solana Build",
@@ -270,19 +256,19 @@ export const translations = {
       titleAccent: "agora.",
       items: [
         {
-          title: "MicroID Lab",
-          desc: "Diagnóstico portátil com IA para regiões de baixa infraestrutura.",
-          status: "ATIVO",
-        },
-        {
-          title: "Harvard HSIL → Mundial",
-          desc: "Representando o Brasil no palco global em 2026.",
+          title: "MicroID Lab → Mundial",
+          desc: "Diagnóstico portátil com IA — projeto vencedor do Harvard HSIL, agora rumo ao palco global.",
           status: "COMPETINDO",
         },
         {
           title: "START SP Pré-Incubação",
           desc: "Validando product-market fit dentro da aceleradora de SP.",
           status: "BUILDING",
+        },
+        {
+          title: "Solana Builds",
+          desc: "Experimentos dApp de alta performance rodando na mainnet.",
+          status: "ATIVO",
         },
       ],
     },
