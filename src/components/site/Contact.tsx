@@ -19,14 +19,14 @@ export function Contact() {
 
           <div className="mt-10 flex flex-wrap gap-4">
             <a
-              href="mailto:hello@example.com"
+              href="mailto:eduardooliveiira307@gmail.com"
               className="group inline-flex items-center gap-3 bg-white px-8 py-4 font-mono text-sm font-bold uppercase tracking-wider text-pitch transition-all hover:bg-violet-glow hover:text-white hover:shadow-glow-violet"
             >
               Email me
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/eduardo-orc"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-3 border border-border bg-pitch px-8 py-4 font-mono text-sm uppercase tracking-wider text-muted-foreground transition-colors hover:border-cyan-sharp hover:text-cyan-sharp"
@@ -34,7 +34,7 @@ export function Contact() {
               LinkedIn
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/eduardo3071"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-3 border border-border bg-pitch px-8 py-4 font-mono text-sm uppercase tracking-wider text-muted-foreground transition-colors hover:border-cyan-sharp hover:text-cyan-sharp"
