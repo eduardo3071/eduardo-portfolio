@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLang } from "@/lib/i18n";
 import microidDuo from "@/assets/microid-duo.jpg";
 import microidWorldmap from "@/assets/microid-worldmap.jpg";
@@ -6,12 +6,20 @@ import microidTeam from "@/assets/microid-team.jpg";
 import microidTimeline from "@/assets/microid-timeline.jpg";
 import microidCrowd from "@/assets/microid-crowd.jpg";
 
-const microidGallery = [
-  { src: microidWorldmap, label: "HSIL · 30+ countries · 40 hubs", span: "md:col-span-2 md:row-span-2" },
-  { src: microidTeam, label: "Team · InovaHC — HCFMUSP", span: "md:col-span-2" },
-  { src: microidDuo, label: "Hub winners · São Paulo", span: "" },
-  { src: microidCrowd, label: "Hackathon floor · April 2026", span: "" },
-  { src: microidTimeline, label: "Venture Building Program · 2026", span: "md:col-span-2" },
+type GalleryItem = {
+  type: "image" | "video";
+  src: string;
+  label: string;
+  span: string;
+};
+
+const microidGallery: GalleryItem[] = [
+  { type: "image", src: microidWorldmap, label: "HSIL · 30+ countries · 40 hubs", span: "md:col-span-2 md:row-span-2" },
+  { type: "image", src: microidTeam, label: "Team · InovaHC — HCFMUSP", span: "md:col-span-2" },
+  { type: "image", src: microidDuo, label: "Hub winners · São Paulo", span: "" },
+  { type: "image", src: microidCrowd, label: "Hackathon floor · April 2026", span: "" },
+  { type: "image", src: microidTimeline, label: "Venture Building Program · 2026", span: "md:col-span-2" },
+  { type: "video", src: "/media/microid-hsil.mp4", label: "▶ Live · Hackathon HSIL", span: "col-span-2 row-span-2 md:col-span-2" },
 ];
 
 const meta = [
@@ -142,41 +150,90 @@ export function Projects() {
                   </div>
                 </div>
                 <div className="grid auto-rows-[110px] grid-cols-2 gap-2 md:grid-cols-4">
-                  {microidGallery.map((img) => (
-                    <figure
-                      key={img.label}
-                      className={`group relative overflow-hidden border border-border bg-pitch ${img.span}`}
+                  {microidGallery.map((item) => (
+                    <button
+                      type="button"
+                      key={item.label}
+                      onClick={() => setLightbox(item)}
+                      className={`group relative overflow-hidden border border-border bg-pitch transition-all hover:border-violet-core/60 hover:shadow-glow-violet focus:outline-none focus:ring-2 focus:ring-violet-core ${item.span}`}
+                      aria-label={`Open ${item.label}`}
                     >
-                      <img
-                        src={img.src}
-                        alt={img.label}
-                        loading="lazy"
-                        className="size-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-[1.03]"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-pitch/90 via-pitch/10 to-transparent opacity-80 transition-opacity group-hover:opacity-60" />
-                      <figcaption className="absolute bottom-0 left-0 right-0 p-2 font-mono text-[9px] uppercase tracking-widest text-white/80">
-                        {img.label}
+                      {item.type === "image" ? (
+                        <img
+                          src={item.src}
+                          alt={item.label}
+                          loading="lazy"
+                          className="size-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                        />
+                      ) : (
+                        <>
+                          <video
+                            src={item.src}
+                            className="size-full object-cover"
+                            muted
+                            playsInline
+                            preload="metadata"
+                          />
+                          <div className="absolute inset-0 flex items-center justify-center bg-pitch/40 transition-colors group-hover:bg-pitch/20">
+                            <span className="flex size-12 items-center justify-center rounded-full border border-violet-glow/60 bg-pitch/70 font-mono text-violet-glow backdrop-blur-sm">
+                              ▶
+                            </span>
+                          </div>
+                        </>
+                      )}
+                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-pitch/90 via-pitch/10 to-transparent opacity-80 transition-opacity group-hover:opacity-50" />
+                      <figcaption className="pointer-events-none absolute bottom-0 left-0 right-0 p-2 text-left font-mono text-[9px] uppercase tracking-widest text-white/80">
+                        {item.label}
                       </figcaption>
-                    </figure>
+                    </button>
                   ))}
-                  <figure className="group relative col-span-2 row-span-2 overflow-hidden border border-violet-core/40 bg-pitch md:col-span-2">
-                    <video
-                      src="/media/microid-hsil.mp4"
-                      className="size-full object-cover"
-                      controls
-                      playsInline
-                      preload="metadata"
-                    />
-                    <figcaption className="pointer-events-none absolute left-2 top-2 border border-violet-core/60 bg-pitch/80 px-2 py-0.5 font-mono text-[9px] uppercase tracking-widest text-violet-glow backdrop-blur-sm">
-                      ▶ Live · Hackathon HSIL
-                    </figcaption>
-                  </figure>
                 </div>
               </div>
             )}
           </div>
         </div>
       </div>
+
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-pitch/95 p-4 backdrop-blur-md md:p-10"
+          onClick={() => setLightbox(null)}
+          role="dialog"
+          aria-modal="true"
+        >
+          <button
+            type="button"
+            onClick={() => setLightbox(null)}
+            className="absolute right-4 top-4 flex size-10 items-center justify-center border border-border bg-carbon/60 font-mono text-white transition-colors hover:border-violet-core hover:text-violet-glow md:right-8 md:top-8"
+            aria-label="Close"
+          >
+            ✕
+          </button>
+          <div
+            className="relative flex max-h-[90vh] w-full max-w-6xl flex-col gap-3"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {lightbox.type === "image" ? (
+              <img
+                src={lightbox.src}
+                alt={lightbox.label}
+                className="max-h-[85vh] w-full object-contain"
+              />
+            ) : (
+              <video
+                src={lightbox.src}
+                className="max-h-[85vh] w-full object-contain bg-black"
+                controls
+                autoPlay
+                playsInline
+              />
+            )}
+            <div className="font-mono text-[11px] uppercase tracking-widest text-muted-foreground">
+              {lightbox.label}
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
