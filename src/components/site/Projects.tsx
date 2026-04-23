@@ -6,6 +6,8 @@ import microidTeam from "@/assets/microid-team.jpg";
 import microidTimeline from "@/assets/microid-timeline.jpg";
 import microidCrowd from "@/assets/microid-crowd.jpg";
 import teacessoBuildathon from "@/assets/teacesso-buildathon.jpg";
+import garagemLogo from "@/assets/garagem-logo.png";
+import garagemJornada from "@/assets/garagem-jornada.png";
 
 type GalleryItem = {
   type: "image" | "video";
@@ -30,6 +32,13 @@ const galleries: Record<number, { archive: string; items: GalleryItem[] }> = {
     archive: "Field Archive · Lovable × Start SP Buildathon",
     items: [
       { type: "image", src: teacessoBuildathon, label: "Vice-champion · Lovable Buildathon", span: "col-span-2 row-span-2 md:col-span-4 md:row-span-3" },
+    ],
+  },
+  4: {
+    archive: "Field Archive · Garagem de Startups 2026 · LEPoli-USP",
+    items: [
+      { type: "image", src: garagemLogo, label: "Garagem de Startups 2026 · LEPoli-USP", span: "col-span-2 md:col-span-2 md:row-span-2" },
+      { type: "image", src: garagemJornada, label: "Jornada de 4 Dias · Problema → Demo Day", span: "col-span-2 md:col-span-2 md:row-span-2" },
     ],
   },
 };
