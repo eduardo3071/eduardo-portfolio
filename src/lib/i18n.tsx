@@ -107,7 +107,7 @@ export const translations = {
       items: [
         {
           title: "MicroID Lab → World Finals",
-          desc: "AI-powered portable diagnostics — winning Harvard HSIL entry, now heading to the global stage.",
+          desc: "Winning Harvard HSIL entry — now heading to the global stage. Details soon.",
           status: "COMPETING",
         },
         {
@@ -285,7 +285,7 @@ export const translations = {
       items: [
         {
           title: "MicroID Lab → Mundial",
-          desc: "Diagnóstico portátil com IA — projeto vencedor do Harvard HSIL, agora rumo ao palco global.",
+          desc: "Projeto vencedor do Harvard HSIL — rumo ao palco global. Mais detalhes em breve.",
           status: "COMPETINDO",
         },
         {
