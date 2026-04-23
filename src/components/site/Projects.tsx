@@ -5,6 +5,7 @@ import microidWorldmap from "@/assets/microid-worldmap.jpg";
 import microidTeam from "@/assets/microid-team.jpg";
 import microidTimeline from "@/assets/microid-timeline.jpg";
 import microidCrowd from "@/assets/microid-crowd.jpg";
+import teacessoBuildathon from "@/assets/teacesso-buildathon.jpg";
 
 type GalleryItem = {
   type: "image" | "video";
@@ -13,14 +14,25 @@ type GalleryItem = {
   span: string;
 };
 
-const microidGallery: GalleryItem[] = [
-  { type: "image", src: microidWorldmap, label: "HSIL · 30+ countries · 40 hubs", span: "md:col-span-2 md:row-span-2" },
-  { type: "image", src: microidTeam, label: "Team · InovaHC — HCFMUSP", span: "md:col-span-2" },
-  { type: "image", src: microidDuo, label: "Hub winners · São Paulo", span: "" },
-  { type: "image", src: microidCrowd, label: "Hackathon floor · April 2026", span: "" },
-  { type: "image", src: microidTimeline, label: "Venture Building Program · 2026", span: "md:col-span-2" },
-  { type: "video", src: "/media/microid-hsil.mp4", label: "▶ Live · Hackathon HSIL", span: "col-span-2 row-span-2 md:col-span-2" },
-];
+const galleries: Record<number, { archive: string; items: GalleryItem[] }> = {
+  0: {
+    archive: "Field Archive · HSIL '26",
+    items: [
+      { type: "image", src: microidWorldmap, label: "HSIL · 30+ countries · 40 hubs", span: "md:col-span-2 md:row-span-2" },
+      { type: "image", src: microidTeam, label: "Team · InovaHC — HCFMUSP", span: "md:col-span-2" },
+      { type: "image", src: microidDuo, label: "Hub winners · São Paulo", span: "" },
+      { type: "image", src: microidCrowd, label: "Hackathon floor · April 2026", span: "" },
+      { type: "image", src: microidTimeline, label: "Venture Building Program · 2026", span: "md:col-span-2" },
+      { type: "video", src: "/media/microid-hsil.mp4", label: "▶ Live · Hackathon HSIL", span: "col-span-2 row-span-2 md:col-span-2" },
+    ],
+  },
+  2: {
+    archive: "Field Archive · Lovable × Start SP Buildathon",
+    items: [
+      { type: "image", src: teacessoBuildathon, label: "Vice-champion · Lovable Buildathon", span: "col-span-2 row-span-2 md:col-span-4 md:row-span-3" },
+    ],
+  },
+};
 
 const meta = [
   { id: "01", accent: "violet" as const, stack: ["AI/ML", "Health Tech", "Stealth"] },
@@ -155,16 +167,16 @@ export function Projects() {
               <p className="mt-1 text-white">{p.impact}</p>
             </div>
 
-            {active === 0 && (
+            {galleries[active] && (
               <div className="pt-2">
                 <div className="mb-3 flex items-center gap-3">
                   <span className="size-1.5 rounded-full bg-violet-glow" />
                   <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                    Field Archive · HSIL '26
+                    {galleries[active].archive}
                   </div>
                 </div>
                 <div className="grid auto-rows-[110px] grid-cols-2 gap-2 md:grid-cols-4">
-                  {microidGallery.map((item) => (
+                  {galleries[active].items.map((item) => (
                     <button
                       type="button"
                       key={item.label}
