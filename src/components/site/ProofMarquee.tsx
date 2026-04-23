@@ -1,14 +1,8 @@
-const items = [
-  "🏆 HARVARD HSIL BRAZIL — WINNER 2026",
-  "🌎 WORLD FINALS — 120 TEAMS / 41 COUNTRIES",
-  "🚀 START SP — PRE-INCUBATED",
-  "🏅 TOP 12 SEBRAE STARTUPS",
-  "⚡ SOLANA BUILDER",
-  "🧬 MICROID LAB — AI + HEALTH",
-  "🎓 FUTURE POLI-USP GARAGE",
-];
+import { useLang } from "@/lib/i18n";
 
 export function ProofMarquee() {
+  const { t } = useLang();
+  const items = t.proof;
   return (
     <section
       id="proof"

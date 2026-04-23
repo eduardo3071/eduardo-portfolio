@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useLang } from "@/lib/i18n";
 
 function Badge({
   id,
@@ -46,6 +47,7 @@ function Badge({
 }
 
 export function Hero() {
+  const { t } = useLang();
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
   const ref = useRef<HTMLDivElement>(null);
 
@@ -77,7 +79,7 @@ export function Hero() {
         <div className="flex flex-col gap-8 lg:col-span-7">
           <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-widest text-muted-foreground animate-fade-up">
             <span className="size-2 animate-pulse-soft bg-cyan-sharp shadow-glow-cyan" />
-            System Online // Building in public // 2026
+            {t.hero.status}
           </div>
 
           <h1
@@ -93,9 +95,9 @@ export function Hero() {
             className="max-w-[48ch] text-pretty text-lg text-muted-foreground sm:text-xl lg:text-2xl"
             style={{ animation: "fade-up 0.8s ease-out 0.25s both" }}
           >
-            Building at the intersection of{" "}
-            <span className="text-white">AI, Health & Startups.</span> Full-stack
-            engineer with founder energy — turning frontier tech into shipped products.
+            {t.hero.tagline1}{" "}
+            <span className="text-white">{t.hero.tagline2}</span>
+            {t.hero.tagline3}
           </p>
 
           <div
@@ -106,14 +108,14 @@ export function Hero() {
               href="#projects"
               className="group relative inline-flex items-center gap-3 bg-violet-core px-8 py-4 font-mono text-sm font-bold uppercase tracking-wider text-white transition-all hover:bg-violet-glow hover:shadow-glow-violet"
             >
-              [ View Projects ]
+              {t.hero.viewProjects}
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </a>
             <a
               href="#contact"
               className="inline-flex items-center gap-3 border border-border bg-carbon/50 px-8 py-4 font-mono text-sm font-bold uppercase tracking-wider text-muted-foreground backdrop-blur-md transition-all hover:border-cyan-sharp hover:text-cyan-sharp"
             >
-              Get in touch
+              {t.hero.getInTouch}
             </a>
           </div>
 
@@ -121,19 +123,17 @@ export function Hero() {
             className="mt-6 font-mono text-[11px] uppercase leading-relaxed text-muted-foreground/40"
             style={{ animation: "fade-up 0.8s ease-out 0.6s both" }}
           >
-            &gt; LOC: SÃO_PAULO_BR<br />
-            &gt; STATUS: HARVARD HSIL '26 WINNER • WORLD FINALS<br />
-            &gt; AWAITING_COMMAND<span className="animate-blink">_</span>
+            {t.hero.loc}<br />
+            {t.hero.statusLine}<br />
+            {t.hero.awaiting}<span className="animate-blink">_</span>
           </div>
         </div>
 
         {/* RIGHT — telemetry HUD */}
         <div className="relative hidden h-[600px] lg:col-span-5 lg:block">
-          {/* Crosshairs */}
           <div className="absolute left-1/2 top-0 h-full w-px bg-border" />
           <div className="absolute left-0 top-1/2 h-px w-full bg-border" />
 
-          {/* Center medallion */}
           <div
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
             style={{
@@ -147,11 +147,11 @@ export function Hero() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
                   <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                    Subject
+                    {t.hero.subject}
                   </div>
                   <div className="mt-1 text-2xl font-bold text-white">E.O.</div>
                   <div className="mt-1 font-mono text-[10px] uppercase tracking-widest text-cyan-sharp">
-                    ID 2026
+                    {t.hero.id}
                   </div>
                 </div>
               </div>
@@ -160,9 +160,9 @@ export function Hero() {
 
           <Badge
             id="ID: 001-HSIL"
-            title="Harvard HSIL '26"
-            meta="STATUS"
-            status="WINNER"
+            title={t.hero.badges.hsilTitle}
+            meta={t.hero.badges.hsilMeta}
+            status={t.hero.badges.hsilStatus}
             accent="violet"
             className="left-0 top-[6%]"
             delay={0.3}
@@ -170,9 +170,9 @@ export function Hero() {
           />
           <Badge
             id="ID: 002-WDFN"
-            title="World Finals"
+            title={t.hero.badges.wdfnTitle}
             meta="120 / 41"
-            status="COMPETING"
+            status={t.hero.badges.wdfnStatus}
             accent="cyan"
             className="right-0 top-[28%]"
             delay={0.45}
@@ -180,9 +180,9 @@ export function Hero() {
           />
           <Badge
             id="ID: 003-STSP"
-            title="START SP"
-            meta="STAGE"
-            status="PRE-INC"
+            title={t.hero.badges.startTitle}
+            meta={t.hero.badges.startMeta}
+            status={t.hero.badges.startStatus}
             accent="neutral"
             className="bottom-[18%] left-2"
             delay={0.6}
@@ -190,9 +190,9 @@ export function Hero() {
           />
           <Badge
             id="ID: 004-SOL"
-            title="Solana Builder"
-            meta="NETWORK"
-            status="MAINNET"
+            title={t.hero.badges.solTitle}
+            meta={t.hero.badges.solMeta}
+            status={t.hero.badges.solStatus}
             accent="violet"
             className="bottom-[2%] right-4"
             delay={0.75}

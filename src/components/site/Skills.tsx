@@ -1,20 +1,17 @@
-const groups = [
-  { title: "Frontend", items: ["React", "Next.js", "TypeScript", "UI/UX"] },
-  { title: "Backend", items: ["Node.js", "APIs", "Auth", "Databases"] },
-  { title: "Data / AI", items: ["Python", "Computer Vision", "ML Ops"] },
-  { title: "Web3", items: ["Solana", "Rust basics", "Smart Contracts"] },
-];
+import { useLang } from "@/lib/i18n";
 
 export function Skills() {
+  const { t } = useLang();
+  const groups = t.skills.groups;
   return (
     <section className="relative border-t border-border bg-carbon/20 py-24">
       <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
         <div className="mb-12">
           <div className="font-mono text-xs uppercase tracking-widest text-cyan-sharp">
-            // 04 — Capabilities
+            {t.skills.label}
           </div>
           <h2 className="mt-4 text-4xl font-bold tracking-tight text-white lg:text-5xl">
-            Stack & disciplines.
+            {t.skills.title}
           </h2>
         </div>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
