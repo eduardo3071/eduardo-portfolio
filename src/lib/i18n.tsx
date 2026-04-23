@@ -105,6 +105,13 @@ export const translations = {
           solution: "Unified patient data layer on blockchain — auditable, portable, and interoperable across providers.",
           impact: "Built inside SEBRAE Startups Digital program — Top 12 recognition.",
         },
+        {
+          name: "Garagem de Startups — Poli-USP",
+          tag: "Bootcamp · LEPoli-USP",
+          problem: "University founders need a real path from idea to investor-ready pitch.",
+          solution: "Latin America's largest university entrepreneurship bootcamp — from problem ideation and MVP to traction and Demo Day.",
+          impact: "Selected participant — pitching to investors (Atlantico, Norte Ventures, Indicator, Poli Angels).",
+        },
       ],
     },
     now: {
@@ -289,6 +296,13 @@ export const translations = {
           problem: "Dados de pacientes fragmentados geram erros médicos, danos ao paciente e aumento de custos na saúde.",
           solution: "Camada unificada de dados do paciente em blockchain — auditável, portável e interoperável entre prestadores.",
           impact: "Construído no programa SEBRAE Startups Digital — Top 12.",
+        },
+        {
+          name: "Garagem de Startups — Poli-USP",
+          tag: "Bootcamp · LEPoli-USP",
+          problem: "Founders universitários precisam de um caminho real da ideia ao pitch para investidores.",
+          solution: "Maior bootcamp universitário de empreendedorismo da América Latina — da ideação e MVP até tração e Demo Day.",
+          impact: "Participante selecionado — pitch para investidores (Atlantico, Norte Ventures, Indicator, Poli Angels).",
         },
       ],
     },
