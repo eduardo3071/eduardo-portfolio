@@ -1,33 +1,19 @@
-const items = [
-  {
-    title: "MicroID Lab",
-    desc: "AI-powered portable diagnostics for low-infrastructure regions.",
-    status: "ACTIVE",
-  },
-  {
-    title: "Harvard HSIL → World Finals",
-    desc: "Representing Brazil at the global stage in 2026.",
-    status: "COMPETING",
-  },
-  {
-    title: "START SP Pre-Incubation",
-    desc: "Validating product-market fit inside SP's accelerator.",
-    status: "BUILDING",
-  },
-];
+import { useLang } from "@/lib/i18n";
 
 export function NowBuilding() {
+  const { t } = useLang();
+  const items = t.now.items;
   return (
     <section id="now" className="relative border-y border-border bg-carbon/30 py-24 backdrop-blur-sm">
       <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
         <div className="mb-12 flex items-center gap-4">
           <span className="size-3 animate-pulse-soft rounded-full bg-cyan-sharp shadow-glow-cyan" />
           <div className="font-mono text-xs uppercase tracking-widest text-cyan-sharp">
-            // Live Feed
+            {t.now.live}
           </div>
         </div>
         <h2 className="mb-12 max-w-3xl text-4xl font-bold tracking-tight text-white lg:text-5xl">
-          What I&apos;m building <span className="text-gradient">right now.</span>
+          {t.now.titlePre}<span className="text-gradient">{t.now.titleAccent}</span>
         </h2>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           {items.map((it, i) => (

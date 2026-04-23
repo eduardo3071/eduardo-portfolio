@@ -1,57 +1,11 @@
 import { useState } from "react";
+import { useLang } from "@/lib/i18n";
 
-type Project = {
-  id: string;
-  name: string;
-  tag: string;
-  problem: string;
-  solution: string;
-  stack: string[];
-  impact: string;
-  accent: "violet" | "cyan";
-};
-
-const projects: Project[] = [
-  {
-    id: "01",
-    name: "MicroID Lab",
-    tag: "Health × AI",
-    problem: "Pathogen diagnosis is inaccessible in low-infrastructure regions.",
-    solution: "Portable microscopy + computer vision for fast, affordable ID.",
-    stack: ["Python", "Computer Vision", "React", "Edge AI"],
-    impact: "Targeting clinics in underserved Brazilian regions.",
-    accent: "violet",
-  },
-  {
-    id: "02",
-    name: "Harvard HSIL Project",
-    tag: "Global Competition",
-    problem: "Global health systems need scalable diagnostic infrastructure.",
-    solution: "AI-driven platform — winning entry, headed to World Finals.",
-    stack: ["AI/ML", "Full-Stack", "Health Data"],
-    impact: "1st place Brazil • Top 120 teams worldwide.",
-    accent: "cyan",
-  },
-  {
-    id: "03",
-    name: "Solana Build",
-    tag: "Web3",
-    problem: "On-chain UX still gatekeeps mainstream adoption.",
-    solution: "High-throughput dApp infrastructure on Solana mainnet.",
-    stack: ["Rust", "Solana", "TypeScript"],
-    impact: "Hackathon-ready. Builder ecosystem participant.",
-    accent: "violet",
-  },
-  {
-    id: "04",
-    name: "START SP Venture",
-    tag: "Startup × Pre-Inc",
-    problem: "Early-stage execution gap between idea and product.",
-    solution: "Productized founder operations + go-to-market validation.",
-    stack: ["Strategy", "Product", "Growth"],
-    impact: "Pre-incubated at START SP accelerator.",
-    accent: "cyan",
-  },
+const meta = [
+  { id: "01", accent: "violet" as const, stack: ["Python", "Computer Vision", "React", "Edge AI"] },
+  { id: "02", accent: "cyan" as const, stack: ["AI/ML", "Full-Stack", "Health Data"] },
+  { id: "03", accent: "violet" as const, stack: ["Rust", "Solana", "TypeScript"] },
+  { id: "04", accent: "cyan" as const, stack: ["Strategy", "Product", "Growth"] },
 ];
 
 const accentClasses = {
@@ -70,7 +24,16 @@ const accentClasses = {
 } as const;
 
 export function Projects() {
+  const { t } = useLang();
   const [active, setActive] = useState(0);
+
+  const projects = t.projects.list.map((proj, i) => ({
+    ...proj,
+    id: meta[i].id,
+    accent: meta[i].accent,
+    stack: meta[i].stack,
+  }));
+
   const p = projects[active];
   const a = accentClasses[p.accent];
 
@@ -79,15 +42,13 @@ export function Projects() {
       <div className="mb-16 flex flex-wrap items-end justify-between gap-6">
         <div>
           <div className="font-mono text-xs uppercase tracking-widest text-cyan-sharp">
-            // 02 — Active Builds
+            {t.projects.label}
           </div>
           <h2 className="mt-4 text-4xl font-bold tracking-tight text-white lg:text-5xl">
-            Selected projects.
+            {t.projects.title}
           </h2>
         </div>
-        <p className="max-w-md text-muted-foreground">
-          A few active builds across health, AI, and Web3. Quality over volume.
-        </p>
+        <p className="max-w-md text-muted-foreground">{t.projects.lead}</p>
       </div>
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
@@ -129,22 +90,22 @@ export function Projects() {
         <div className="relative overflow-hidden border border-border bg-carbon/40 p-8 backdrop-blur-md lg:col-span-7 lg:p-10">
           <div className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent to-transparent ${a.line}`} />
           <div className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
-            CASE_FILE / {p.id}
+            {t.projects.caseFile} / {p.id}
           </div>
           <h3 className="mt-3 text-3xl font-bold text-white lg:text-4xl">{p.name}</h3>
           <div className={`mt-2 font-mono text-sm ${a.text}`}>{p.tag}</div>
 
           <div className="mt-8 space-y-6">
             <div>
-              <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">Problem</div>
+              <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">{t.projects.problem}</div>
               <p className="mt-1 text-white">{p.problem}</p>
             </div>
             <div>
-              <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">Solution</div>
+              <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">{t.projects.solution}</div>
               <p className="mt-1 text-muted-foreground">{p.solution}</p>
             </div>
             <div>
-              <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">Stack</div>
+              <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">{t.projects.stack}</div>
               <div className="mt-2 flex flex-wrap gap-2">
                 {p.stack.map((s) => (
                   <span key={s} className="border border-border bg-pitch px-3 py-1 font-mono text-xs text-white/80">
@@ -154,7 +115,7 @@ export function Projects() {
               </div>
             </div>
             <div className={`border-l-2 pl-4 ${a.border}`}>
-              <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">Impact</div>
+              <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">{t.projects.impact}</div>
               <p className="mt-1 text-white">{p.impact}</p>
             </div>
           </div>

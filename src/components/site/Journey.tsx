@@ -1,21 +1,16 @@
-const steps = [
-  { year: "2025", title: "Started ADS", desc: "Launched into systems development & full-stack." },
-  { year: "2026", title: "Harvard HSIL — Brazil Winner", desc: "First place. Solo & team-led innovation." },
-  { year: "2026", title: "Harvard World Finals", desc: "Representing Brazil — 120 teams, 41 countries." },
-  { year: "2026", title: "START SP — Pre-Incubation", desc: "Selected venture moves into accelerator." },
-  { year: "2026", title: "SEBRAE Startups — Top 12", desc: "Recognized among top early-stage Brazilian builders." },
-  { year: "Next", title: "Poli-USP Garage + Supernova", desc: "Engineering home base for the next phase." },
-];
+import { useLang } from "@/lib/i18n";
 
 export function Journey() {
+  const { t } = useLang();
+  const steps = t.journey.steps;
   return (
     <section id="journey" className="relative mx-auto max-w-[1440px] px-6 py-32 lg:px-12">
       <div className="mb-16">
         <div className="font-mono text-xs uppercase tracking-widest text-cyan-sharp">
-          // 03 — Trajectory
+          {t.journey.label}
         </div>
         <h2 className="mt-4 text-4xl font-bold tracking-tight text-white lg:text-5xl">
-          From zero to global stage.
+          {t.journey.title}
         </h2>
       </div>
 
