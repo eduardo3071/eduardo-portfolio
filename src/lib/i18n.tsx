@@ -316,10 +316,38 @@ export const translations = {
       label: "// 04 — Capacidades",
       title: "Stack & disciplinas.",
       groups: [
-        { title: "Frontend", items: ["React", "Next.js", "TypeScript", "UI/UX"] },
-        { title: "Backend", items: ["Node.js", "APIs", "Auth", "Bancos de dados"] },
-        { title: "Dados / IA", items: ["Python", "Visão Computacional", "ML Ops"] },
-        { title: "Web3", items: ["Solana", "Rust básico", "Smart Contracts"] },
+        {
+          title: "Frontend",
+          items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Design UI/UX", "Design Responsivo", "Acessibilidade (a11y)"],
+        },
+        {
+          title: "Backend",
+          items: ["Node.js", "APIs REST & GraphQL", "Auth (JWT / OAuth)", "PostgreSQL", "Supabase", "Edge Functions", "WebSockets", "Microsserviços"],
+        },
+        {
+          title: "Dados / IA",
+          items: ["Python", "Visão Computacional (OpenCV)", "PyTorch / TensorFlow", "LLMs & RAG", "Prompt Engineering", "ML Ops", "Pipelines de Dados", "Jupyter"],
+        },
+        {
+          title: "Web3",
+          items: ["Solana", "Rust", "Smart Contracts", "Anchor Framework", "Web3.js", "Integração de Wallets", "Tokenomics", "UX On-chain"],
+        },
+        {
+          title: "DevOps & Infra",
+          items: ["Git & GitHub", "Docker", "CI/CD", "Vercel", "Cloudflare Workers", "Linux", "Monitoramento", "Otimização de Performance"],
+        },
+        {
+          title: "Produto & Founder",
+          items: ["Estratégia de Produto", "Go-to-Market", "Pesquisa de Usuário", "Validação de MVP", "Pitching", "Fundamentos de Captação", "Loops de Crescimento", "Lean Startup"],
+        },
+        {
+          title: "Design & Criativo",
+          items: ["Figma", "Design Systems", "Prototipação", "Motion Design", "Identidade de Marca", "Storytelling"],
+        },
+        {
+          title: "Idiomas & Soft Skills",
+          items: ["Português (nativo)", "Inglês (fluente)", "Oratória", "Times Multiculturais", "Liderança", "Bias for Action"],
+        },
       ],
     },
     contact: {
