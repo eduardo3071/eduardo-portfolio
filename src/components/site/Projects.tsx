@@ -54,10 +54,25 @@ const projects: Project[] = [
   },
 ];
 
+const accentClasses = {
+  violet: {
+    bar: "bg-violet-core",
+    text: "text-violet-glow",
+    border: "border-violet-core",
+    line: "via-violet-core",
+  },
+  cyan: {
+    bar: "bg-cyan-sharp",
+    text: "text-cyan-sharp",
+    border: "border-cyan-sharp",
+    line: "via-cyan-sharp",
+  },
+} as const;
+
 export function Projects() {
   const [active, setActive] = useState(0);
   const p = projects[active];
-  const accent = p.accent === "violet" ? "violet-core" : "cyan-sharp";
+  const a = accentClasses[p.accent];
 
   return (
     <section id="projects" className="relative mx-auto max-w-[1440px] px-6 py-32 lg:px-12">
@@ -76,10 +91,10 @@ export function Projects() {
       </div>
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
-        {/* List */}
         <div className="space-y-2 lg:col-span-5">
           {projects.map((proj, i) => {
             const isActive = i === active;
+            const pa = accentClasses[proj.accent];
             return (
               <button
                 key={proj.id}
@@ -89,9 +104,9 @@ export function Projects() {
                 }`}
               >
                 <div
-                  className={`absolute inset-y-0 left-0 w-[3px] bg-${proj.accent === "violet" ? "violet-core" : "cyan-sharp"} transition-transform ${
+                  className={`absolute inset-y-0 left-0 w-[3px] origin-top transition-transform ${pa.bar} ${
                     isActive ? "scale-y-100" : "scale-y-0 group-hover:scale-y-100"
-                  } origin-top`}
+                  }`}
                 />
                 <div className="flex items-center justify-between">
                   <div className="font-mono text-[11px] uppercase tracking-widest text-muted-foreground">
@@ -111,47 +126,35 @@ export function Projects() {
           })}
         </div>
 
-        {/* Detail */}
         <div className="relative overflow-hidden border border-border bg-carbon/40 p-8 backdrop-blur-md lg:col-span-7 lg:p-10">
-          <div className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-${accent} to-transparent`} />
+          <div className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent to-transparent ${a.line}`} />
           <div className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
             CASE_FILE / {p.id}
           </div>
           <h3 className="mt-3 text-3xl font-bold text-white lg:text-4xl">{p.name}</h3>
-          <div className={`mt-2 font-mono text-sm text-${accent}`}>{p.tag}</div>
+          <div className={`mt-2 font-mono text-sm ${a.text}`}>{p.tag}</div>
 
           <div className="mt-8 space-y-6">
             <div>
-              <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                Problem
-              </div>
+              <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">Problem</div>
               <p className="mt-1 text-white">{p.problem}</p>
             </div>
             <div>
-              <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                Solution
-              </div>
+              <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">Solution</div>
               <p className="mt-1 text-muted-foreground">{p.solution}</p>
             </div>
             <div>
-              <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                Stack
-              </div>
+              <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">Stack</div>
               <div className="mt-2 flex flex-wrap gap-2">
                 {p.stack.map((s) => (
-                  <span
-                    key={s}
-                    className="border border-border bg-pitch px-3 py-1 font-mono text-xs text-white/80"
-                  >
+                  <span key={s} className="border border-border bg-pitch px-3 py-1 font-mono text-xs text-white/80">
                     {s}
                   </span>
                 ))}
               </div>
             </div>
-            <div className={`border-l-2 border-${accent} pl-4`}>
-              <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                Impact
-              </div>
+            <div className={`border-l-2 pl-4 ${a.border}`}>
+              <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">Impact</div>
               <p className="mt-1 text-white">{p.impact}</p>
             </div>
           </div>
