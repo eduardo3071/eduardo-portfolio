@@ -15,7 +15,7 @@ export function NowBuilding() {
         <h2 className="mb-12 max-w-3xl text-4xl font-bold tracking-tight text-white lg:text-5xl">
           {t.now.titlePre}<span className="text-gradient">{t.now.titleAccent}</span>
         </h2>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {items.map((it, i) => (
             <div
               key={it.title}
