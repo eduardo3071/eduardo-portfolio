@@ -48,6 +48,20 @@ const accentClasses = {
 export function Projects() {
   const { t } = useLang();
   const [active, setActive] = useState(0);
+  const [lightbox, setLightbox] = useState<GalleryItem | null>(null);
+
+  useEffect(() => {
+    if (!lightbox) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightbox(null);
+    };
+    window.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [lightbox]);
 
   const projects = t.projects.list.map((proj, i) => ({
     ...proj,
