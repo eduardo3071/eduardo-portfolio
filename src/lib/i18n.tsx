@@ -98,6 +98,13 @@ export const translations = {
           solution: "AI-powered app/site built for neurodivergent students — born from the Lovable + Start SP Buildathon.",
           impact: "Vice-champion at Lovable × Start SP Buildathon → entered START SP Venture program.",
         },
+        {
+          name: "HealthGit — SEBRAE Startups Digital",
+          tag: "Health × Blockchain",
+          problem: "Fragmented patient data drives medical errors, patient harm, and rising healthcare costs.",
+          solution: "Unified patient data layer on blockchain — auditable, portable, and interoperable across providers.",
+          impact: "Built inside SEBRAE Startups Digital program — Top 12 recognition.",
+        },
       ],
     },
     now: {
