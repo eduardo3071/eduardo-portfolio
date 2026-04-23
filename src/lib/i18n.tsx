@@ -105,6 +105,13 @@ export const translations = {
           solution: "Unified patient data layer on blockchain — auditable, portable, and interoperable across providers.",
           impact: "Built inside SEBRAE Startups Digital program — Top 12 recognition.",
         },
+        {
+          name: "Garagem de Startups — Poli-USP",
+          tag: "Bootcamp · LEPoli-USP",
+          problem: "University founders need a real path from idea to investor-ready pitch.",
+          solution: "Latin America's largest university entrepreneurship bootcamp — from problem ideation and MVP to traction and Demo Day.",
+          impact: "Selected participant — pitching to investors (Atlantico, Norte Ventures, Indicator, Poli Angels).",
+        },
       ],
     },
     now: {
