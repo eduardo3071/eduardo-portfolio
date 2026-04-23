@@ -120,19 +120,14 @@ export const translations = {
       titleAccent: "right now.",
       items: [
         {
-          title: "MicroID Lab → World Finals",
-          desc: "Winning Harvard HSIL entry — now heading to the global stage. Details soon.",
-          status: "COMPETING",
-        },
-        {
-          title: "TEAcesso @ START SP",
-          desc: "AI tool for neurodivergent students — Buildathon vice-champion now inside START SP.",
+          title: "HealthGit → SEBRAE Digital",
+          desc: "Building a blockchain layer to unify patient data and reduce medical errors.",
           status: "BUILDING",
         },
         {
-          title: "Solana Builds",
-          desc: "Shipping high-throughput dApp experiments on mainnet.",
-          status: "ACTIVE",
+          title: "Garagem de Startups @ Poli-USP",
+          desc: "Inside LATAM's largest university bootcamp — ideation to investor pitch.",
+          status: "IN PROGRESS",
         },
       ],
     },
@@ -312,19 +307,14 @@ export const translations = {
       titleAccent: "agora.",
       items: [
         {
-          title: "MicroID Lab → Mundial",
-          desc: "Projeto vencedor do Harvard HSIL — rumo ao palco global. Mais detalhes em breve.",
-          status: "COMPETINDO",
-        },
-        {
-          title: "TEAcesso @ START SP",
-          desc: "Ferramenta com IA para estudantes neurodivergentes — vice-campeã do Buildathon, agora dentro do START SP.",
+          title: "HealthGit → SEBRAE Digital",
+          desc: "Construindo uma camada blockchain para unificar dados do paciente e reduzir erros médicos.",
           status: "BUILDING",
         },
         {
-          title: "Solana Builds",
-          desc: "Experimentos dApp de alta performance rodando na mainnet.",
-          status: "ATIVO",
+          title: "Garagem de Startups @ Poli-USP",
+          desc: "Dentro do maior bootcamp universitário da América Latina — da ideação ao pitch para investidores.",
+          status: "EM ANDAMENTO",
         },
       ],
     },
