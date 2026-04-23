@@ -1,5 +1,18 @@
 import { useState } from "react";
 import { useLang } from "@/lib/i18n";
+import microidDuo from "@/assets/microid-duo.jpg";
+import microidWorldmap from "@/assets/microid-worldmap.jpg";
+import microidTeam from "@/assets/microid-team.jpg";
+import microidTimeline from "@/assets/microid-timeline.jpg";
+import microidCrowd from "@/assets/microid-crowd.jpg";
+
+const microidGallery = [
+  { src: microidWorldmap, label: "HSIL · 30+ countries · 40 hubs", span: "md:col-span-2 md:row-span-2" },
+  { src: microidTeam, label: "Team · InovaHC — HCFMUSP", span: "md:col-span-2" },
+  { src: microidDuo, label: "Hub winners · São Paulo", span: "" },
+  { src: microidCrowd, label: "Hackathon floor · April 2026", span: "" },
+  { src: microidTimeline, label: "Venture Building Program · 2026", span: "md:col-span-2" },
+];
 
 const meta = [
   { id: "01", accent: "violet" as const, stack: ["AI/ML", "Health Tech", "Stealth"] },
@@ -119,6 +132,48 @@ export function Projects() {
               <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">{t.projects.impact}</div>
               <p className="mt-1 text-white">{p.impact}</p>
             </div>
+
+            {active === 0 && (
+              <div className="pt-2">
+                <div className="mb-3 flex items-center gap-3">
+                  <span className="size-1.5 rounded-full bg-violet-glow" />
+                  <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+                    Field Archive · HSIL '26
+                  </div>
+                </div>
+                <div className="grid auto-rows-[110px] grid-cols-2 gap-2 md:grid-cols-4">
+                  {microidGallery.map((img) => (
+                    <figure
+                      key={img.label}
+                      className={`group relative overflow-hidden border border-border bg-pitch ${img.span}`}
+                    >
+                      <img
+                        src={img.src}
+                        alt={img.label}
+                        loading="lazy"
+                        className="size-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-[1.03]"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-pitch/90 via-pitch/10 to-transparent opacity-80 transition-opacity group-hover:opacity-60" />
+                      <figcaption className="absolute bottom-0 left-0 right-0 p-2 font-mono text-[9px] uppercase tracking-widest text-white/80">
+                        {img.label}
+                      </figcaption>
+                    </figure>
+                  ))}
+                  <figure className="group relative col-span-2 row-span-2 overflow-hidden border border-violet-core/40 bg-pitch md:col-span-2">
+                    <video
+                      src="/media/microid-hsil.mp4"
+                      className="size-full object-cover"
+                      controls
+                      playsInline
+                      preload="metadata"
+                    />
+                    <figcaption className="pointer-events-none absolute left-2 top-2 border border-violet-core/60 bg-pitch/80 px-2 py-0.5 font-mono text-[9px] uppercase tracking-widest text-violet-glow backdrop-blur-sm">
+                      ▶ Live · Hackathon HSIL
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
