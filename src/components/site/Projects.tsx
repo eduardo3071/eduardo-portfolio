@@ -2,10 +2,9 @@ import { useState } from "react";
 import { useLang } from "@/lib/i18n";
 
 const meta = [
-  { id: "01", accent: "violet" as const, stack: ["Python", "Computer Vision", "React", "Edge AI"] },
-  { id: "02", accent: "cyan" as const, stack: ["AI/ML", "Full-Stack", "Health Data"] },
-  { id: "03", accent: "violet" as const, stack: ["Rust", "Solana", "TypeScript"] },
-  { id: "04", accent: "cyan" as const, stack: ["Strategy", "Product", "Growth"] },
+  { id: "01", accent: "violet" as const, stack: ["Python", "Computer Vision", "React", "Edge AI", "AI/ML", "Health Data"] },
+  { id: "02", accent: "cyan" as const, stack: ["Rust", "Solana", "TypeScript"] },
+  { id: "03", accent: "violet" as const, stack: ["Strategy", "Product", "Growth"] },
 ];
 
 const accentClasses = {
