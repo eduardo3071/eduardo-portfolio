@@ -29,14 +29,18 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Eduardo Portfólio - Winner Hackathon Harvard 2026" },
+      { name: "description", content: "Minha trajetória completa como Founder e Estudante" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Eduardo Portfólio - Winner Hackathon Harvard 2026" },
+      { property: "og:description", content: "Minha trajetória completa como Founder e Estudante" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Eduardo Portfólio - Winner Hackathon Harvard 2026" },
+      { name: "twitter:description", content: "Minha trajetória completa como Founder e Estudante" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/04030c7f-fa91-4e88-b9b0-bbc73cda53f7/id-preview-97c2f9ff--74cdc798-ae90-4dfc-9577-910cc7a63660.lovable.app-1776913157034.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/04030c7f-fa91-4e88-b9b0-bbc73cda53f7/id-preview-97c2f9ff--74cdc798-ae90-4dfc-9577-910cc7a63660.lovable.app-1776913157034.png" },
     ],
     links: [
       {
