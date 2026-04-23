@@ -8,6 +8,7 @@ import microidCrowd from "@/assets/microid-crowd.jpg";
 import teacessoBuildathon from "@/assets/teacesso-buildathon.jpg";
 import garagemLogo from "@/assets/garagem-logo.png";
 import garagemJornada from "@/assets/garagem-jornada.png";
+import sebraeForStartups from "@/assets/sebrae-for-startups.png";
 
 type GalleryItem = {
   type: "image" | "video";
@@ -32,6 +33,12 @@ const galleries: Record<number, { archive: string; items: GalleryItem[] }> = {
     archive: "Field Archive · Lovable × Start SP Buildathon",
     items: [
       { type: "image", src: teacessoBuildathon, label: "Vice-champion · Lovable Buildathon", span: "col-span-2 row-span-2 md:col-span-4 md:row-span-3" },
+    ],
+  },
+  3: {
+    archive: "Field Archive · HealthGit · SEBRAE Startups Digital",
+    items: [
+      { type: "image", src: sebraeForStartups, label: "SEBRAE for Startups · Selected program", span: "col-span-2 row-span-2 md:col-span-4 md:row-span-3" },
     ],
   },
   4: {
