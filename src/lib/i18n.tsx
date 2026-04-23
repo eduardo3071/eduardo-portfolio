@@ -80,9 +80,9 @@ export const translations = {
         {
           name: "MicroID Lab — Harvard HSIL",
           tag: "Health × AI · Global Competition",
-          problem: "Pathogen diagnosis is inaccessible in low-infrastructure regions, while global health systems lack scalable diagnostic infrastructure.",
-          solution: "Portable microscopy + computer vision for fast, affordable pathogen ID — the AI-driven platform that won Harvard HSIL Brazil and is heading to the World Finals.",
-          impact: "1st place Brazil • Top 120 teams worldwide • Targeting underserved Brazilian clinics.",
+          problem: "Access to fast, affordable diagnostics is still a bottleneck for global health.",
+          solution: "An AI-powered diagnostics solution — details under wraps pending IP protection.",
+          impact: "1st place Brazil • Top 120 teams worldwide • Heading to the World Finals.",
         },
         {
           name: "Solana Build",
@@ -107,7 +107,7 @@ export const translations = {
       items: [
         {
           title: "MicroID Lab → World Finals",
-          desc: "AI-powered portable diagnostics — winning Harvard HSIL entry, now heading to the global stage.",
+          desc: "Winning Harvard HSIL entry — now heading to the global stage. Details soon.",
           status: "COMPETING",
         },
         {
@@ -258,9 +258,9 @@ export const translations = {
         {
           name: "MicroID Lab — Harvard HSIL",
           tag: "Saúde × IA · Competição Global",
-          problem: "Diagnóstico de patógenos é inacessível em regiões de baixa infraestrutura, enquanto sistemas de saúde globais carecem de infraestrutura diagnóstica escalável.",
-          solution: "Microscopia portátil + visão computacional para identificação rápida e acessível — a plataforma com IA que venceu o Harvard HSIL Brasil e segue para o Mundial.",
-          impact: "1º lugar Brasil • Top 120 equipes mundiais • Foco em clínicas brasileiras desassistidas.",
+          problem: "Acesso a diagnósticos rápidos e acessíveis ainda é um gargalo para a saúde global.",
+          solution: "Uma solução de diagnóstico com IA — detalhes em sigilo até a proteção de propriedade intelectual.",
+          impact: "1º lugar Brasil • Top 120 equipes mundiais • Indo para o Mundial.",
         },
         {
           name: "Solana Build",
@@ -285,7 +285,7 @@ export const translations = {
       items: [
         {
           title: "MicroID Lab → Mundial",
-          desc: "Diagnóstico portátil com IA — projeto vencedor do Harvard HSIL, agora rumo ao palco global.",
+          desc: "Projeto vencedor do Harvard HSIL — rumo ao palco global. Mais detalhes em breve.",
           status: "COMPETINDO",
         },
         {
