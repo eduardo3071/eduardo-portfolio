@@ -138,10 +138,38 @@ export const translations = {
       label: "// 04 — Capabilities",
       title: "Stack & disciplines.",
       groups: [
-        { title: "Frontend", items: ["React", "Next.js", "TypeScript", "UI/UX"] },
-        { title: "Backend", items: ["Node.js", "APIs", "Auth", "Databases"] },
-        { title: "Data / AI", items: ["Python", "Computer Vision", "ML Ops"] },
-        { title: "Web3", items: ["Solana", "Rust basics", "Smart Contracts"] },
+        {
+          title: "Frontend",
+          items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "UI/UX Design", "Responsive Design", "Accessibility (a11y)"],
+        },
+        {
+          title: "Backend",
+          items: ["Node.js", "REST & GraphQL APIs", "Auth (JWT / OAuth)", "PostgreSQL", "Supabase", "Edge Functions", "WebSockets", "Microservices"],
+        },
+        {
+          title: "Data / AI",
+          items: ["Python", "Computer Vision (OpenCV)", "PyTorch / TensorFlow", "LLMs & RAG", "Prompt Engineering", "ML Ops", "Data Pipelines", "Jupyter"],
+        },
+        {
+          title: "Web3",
+          items: ["Solana", "Rust", "Smart Contracts", "Anchor Framework", "Web3.js", "Wallet Integration", "Tokenomics", "On-chain UX"],
+        },
+        {
+          title: "DevOps & Infra",
+          items: ["Git & GitHub", "Docker", "CI/CD", "Vercel", "Cloudflare Workers", "Linux", "Monitoring", "Performance Tuning"],
+        },
+        {
+          title: "Product & Founder",
+          items: ["Product Strategy", "Go-to-Market", "User Research", "MVP Validation", "Pitching", "Fundraising Basics", "Growth Loops", "Lean Startup"],
+        },
+        {
+          title: "Design & Creative",
+          items: ["Figma", "Design Systems", "Prototyping", "Motion Design", "Brand Identity", "Storytelling"],
+        },
+        {
+          title: "Languages & Soft Skills",
+          items: ["Portuguese (native)", "English (fluent)", "Public Speaking", "Cross-cultural Teams", "Leadership", "Bias for Action"],
+        },
       ],
     },
     contact: {
