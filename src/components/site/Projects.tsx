@@ -5,6 +5,7 @@ const meta = [
   { id: "01", accent: "violet" as const, stack: ["AI/ML", "Health Tech", "Stealth"] },
   { id: "02", accent: "cyan" as const, stack: ["Rust", "Solana", "TypeScript"] },
   { id: "03", accent: "violet" as const, stack: ["AI", "EdTech", "Accessibility", "Lovable"] },
+  { id: "04", accent: "cyan" as const, stack: ["Blockchain", "Health Data", "Interoperability"] },
 ];
 
 const accentClasses = {
