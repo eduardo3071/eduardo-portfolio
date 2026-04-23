@@ -297,6 +297,13 @@ export const translations = {
           solution: "Camada unificada de dados do paciente em blockchain — auditável, portável e interoperável entre prestadores.",
           impact: "Construído no programa SEBRAE Startups Digital — Top 12.",
         },
+        {
+          name: "Garagem de Startups — Poli-USP",
+          tag: "Bootcamp · LEPoli-USP",
+          problem: "Founders universitários precisam de um caminho real da ideia ao pitch para investidores.",
+          solution: "Maior bootcamp universitário de empreendedorismo da América Latina — da ideação e MVP até tração e Demo Day.",
+          impact: "Participante selecionado — pitch para investidores (Atlantico, Norte Ventures, Indicator, Poli Angels).",
+        },
       ],
     },
     now: {
