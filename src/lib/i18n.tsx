@@ -80,9 +80,9 @@ export const translations = {
         {
           name: "MicroID Lab — Harvard HSIL",
           tag: "Health × AI · Global Competition",
-          problem: "Pathogen diagnosis is inaccessible in low-infrastructure regions, while global health systems lack scalable diagnostic infrastructure.",
-          solution: "Portable microscopy + computer vision for fast, affordable pathogen ID — the AI-driven platform that won Harvard HSIL Brazil and is heading to the World Finals.",
-          impact: "1st place Brazil • Top 120 teams worldwide • Targeting underserved Brazilian clinics.",
+          problem: "Access to fast, affordable diagnostics is still a bottleneck for global health.",
+          solution: "An AI-powered diagnostics solution — details under wraps pending IP protection.",
+          impact: "1st place Brazil • Top 120 teams worldwide • Heading to the World Finals.",
         },
         {
           name: "Solana Build",
