@@ -4,7 +4,7 @@ import { useLang } from "@/lib/i18n";
 const meta = [
   { id: "01", accent: "violet" as const, stack: ["AI/ML", "Health Tech", "Stealth"] },
   { id: "02", accent: "cyan" as const, stack: ["Rust", "Solana", "TypeScript"] },
-  { id: "03", accent: "violet" as const, stack: ["Strategy", "Product", "Growth"] },
+  { id: "03", accent: "violet" as const, stack: ["AI", "EdTech", "Accessibility", "Lovable"] },
 ];
 
 const accentClasses = {
