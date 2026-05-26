@@ -9,6 +9,11 @@ import teacessoBuildathon from "@/assets/teacesso-buildathon.jpg";
 import garagemTeam from "@/assets/garagem-team.jpg";
 import garagemJornada from "@/assets/garagem-jornada.png";
 import sebraeForStartups from "@/assets/sebrae-for-startups.png";
+import fluxTrophy from "@/assets/flux-trophy.jpg";
+import fluxTeam from "@/assets/flux-team.jpg";
+import fluxFloor from "@/assets/flux-floor.jpg";
+import fluxHackathon from "@/assets/flux-hackathon.jpg";
+import fluxLink from "@/assets/flux-link.jpg";
 
 type GalleryItem = {
   type: "image" | "video";
@@ -27,6 +32,16 @@ const galleries: Record<number, { archive: string; items: GalleryItem[] }> = {
       { type: "image", src: microidCrowd, label: "Hackathon floor · April 2026", span: "" },
       { type: "image", src: microidTimeline, label: "Venture Building Program · 2026", span: "md:col-span-2" },
       { type: "video", src: "/media/microid-hsil.mp4", label: "▶ Live · Hackathon HSIL", span: "col-span-2 row-span-2 md:col-span-2" },
+    ],
+  },
+  1: {
+    archive: "Field Archive · Zero to Hero Hackathon · Link + GRI",
+    items: [
+      { type: "image", src: fluxTrophy, label: "2nd place · Flux AI · Zero to Hero", span: "col-span-2 md:col-span-2 md:row-span-2" },
+      { type: "image", src: fluxTeam, label: "Team Fluxia · 2º Lugar", span: "md:col-span-2" },
+      { type: "image", src: fluxHackathon, label: "Zero to Hero Hackathon · Link + GRI", span: "" },
+      { type: "image", src: fluxLink, label: "Venue · Link School of Business", span: "" },
+      { type: "image", src: fluxFloor, label: "Build floor · Jornada Zero to Hero", span: "md:col-span-2" },
     ],
   },
   2: {
@@ -52,7 +67,7 @@ const galleries: Record<number, { archive: string; items: GalleryItem[] }> = {
 
 const meta = [
   { id: "01", accent: "violet" as const, stack: ["AI/ML", "Health Tech", "Stealth"] },
-  { id: "02", accent: "cyan" as const, stack: ["Rust", "Solana", "TypeScript"] },
+  { id: "02", accent: "cyan" as const, stack: ["AI", "PropTech", "Forecasting", "Real Estate"] },
   { id: "03", accent: "violet" as const, stack: ["AI", "EdTech", "Accessibility", "Lovable"] },
   { id: "04", accent: "cyan" as const, stack: ["Blockchain", "Health Data", "Interoperability"] },
   { id: "05", accent: "violet" as const, stack: ["Bootcamp", "Pitch", "Fundraising", "Poli-USP"] },
