@@ -85,11 +85,11 @@ export const translations = {
           impact: "1st place Brazil • Top 120 teams worldwide • Heading to the World Finals.",
         },
         {
-          name: "Solana Build",
-          tag: "Web3",
-          problem: "On-chain UX still gatekeeps mainstream adoption.",
-          solution: "High-throughput dApp infrastructure on Solana mainnet.",
-          impact: "Hackathon-ready. Builder ecosystem participant.",
+          name: "Flux AI — Link School + GRI Hackathon",
+          tag: "PropTech × AI · Zero to Hero Hackathon",
+          problem: "Small and mid-size real estate developers face cash flow mismatches between construction outflows and slowing sales.",
+          solution: "A web platform that forecasts — based on key inputs from the developer — when cash flow is about to turn red, before it happens.",
+          impact: "2nd place · Zero to Hero Hackathon · Link School of Business + GRI Institute.",
         },
         {
           name: "TEAcesso — START SP Venture",
