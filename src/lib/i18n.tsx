@@ -272,11 +272,11 @@ export const translations = {
           impact: "1º lugar Brasil • Top 120 equipes mundiais • Indo para o Mundial.",
         },
         {
-          name: "Solana Build",
-          tag: "Web3",
-          problem: "UX on-chain ainda barra a adoção mainstream.",
-          solution: "Infraestrutura dApp de alta performance na mainnet Solana.",
-          impact: "Pronto para hackathon. Participante do ecossistema builder.",
+          name: "Flux AI — Hackathon Link School + GRI Institute",
+          tag: "PropTech × IA · Zero to Hero Hackathon",
+          problem: "O descasamento de caixa do pequeno e média incorporadora na construção dos seus imóveis e as vendas diminuindo.",
+          solution: "O site tem a finalidade de prever para à incorporadora antes do fluxo de caixa ficar em vermelho, após receber informações necessárias.",
+          impact: "2º lugar · Zero to Hero Hackathon · Link School of Business + GRI Institute.",
         },
         {
           name: "TEAcesso — START SP Venture",
