@@ -67,7 +67,7 @@ const galleries: Record<number, { archive: string; items: GalleryItem[] }> = {
 
 const meta = [
   { id: "01", accent: "violet" as const, stack: ["AI/ML", "Health Tech", "Stealth"] },
-  { id: "02", accent: "cyan" as const, stack: ["Rust", "Solana", "TypeScript"] },
+  { id: "02", accent: "cyan" as const, stack: ["AI", "PropTech", "Forecasting", "Real Estate"] },
   { id: "03", accent: "violet" as const, stack: ["AI", "EdTech", "Accessibility", "Lovable"] },
   { id: "04", accent: "cyan" as const, stack: ["Blockchain", "Health Data", "Interoperability"] },
   { id: "05", accent: "violet" as const, stack: ["Bootcamp", "Pitch", "Fundraising", "Poli-USP"] },
