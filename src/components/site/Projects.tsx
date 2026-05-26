@@ -34,6 +34,16 @@ const galleries: Record<number, { archive: string; items: GalleryItem[] }> = {
       { type: "video", src: "/media/microid-hsil.mp4", label: "▶ Live · Hackathon HSIL", span: "col-span-2 row-span-2 md:col-span-2" },
     ],
   },
+  1: {
+    archive: "Field Archive · Zero to Hero Hackathon · Link + GRI",
+    items: [
+      { type: "image", src: fluxTrophy, label: "2nd place · Flux AI · Zero to Hero", span: "col-span-2 md:col-span-2 md:row-span-2" },
+      { type: "image", src: fluxTeam, label: "Team Fluxia · 2º Lugar", span: "md:col-span-2" },
+      { type: "image", src: fluxHackathon, label: "Zero to Hero Hackathon · Link + GRI", span: "" },
+      { type: "image", src: fluxLink, label: "Venue · Link School of Business", span: "" },
+      { type: "image", src: fluxFloor, label: "Build floor · Jornada Zero to Hero", span: "md:col-span-2" },
+    ],
+  },
   2: {
     archive: "Field Archive · Lovable × Start SP Buildathon",
     items: [
