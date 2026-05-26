@@ -9,6 +9,11 @@ import teacessoBuildathon from "@/assets/teacesso-buildathon.jpg";
 import garagemTeam from "@/assets/garagem-team.jpg";
 import garagemJornada from "@/assets/garagem-jornada.png";
 import sebraeForStartups from "@/assets/sebrae-for-startups.png";
+import fluxTrophy from "@/assets/flux-trophy.jpg";
+import fluxTeam from "@/assets/flux-team.jpg";
+import fluxFloor from "@/assets/flux-floor.jpg";
+import fluxHackathon from "@/assets/flux-hackathon.jpg";
+import fluxLink from "@/assets/flux-link.jpg";
 
 type GalleryItem = {
   type: "image" | "video";
