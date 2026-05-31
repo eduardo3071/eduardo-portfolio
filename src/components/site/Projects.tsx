@@ -14,6 +14,10 @@ import fluxTeam from "@/assets/flux-team.jpg";
 import fluxFloor from "@/assets/flux-floor.jpg";
 import fluxHackathon from "@/assets/flux-hackathon.jpg";
 import fluxLink from "@/assets/flux-link.jpg";
+import jesusLogo from "@/assets/jesus-votara-logo.png";
+import jesusTeam from "@/assets/jesus-votara-team.jpg";
+import jesusSponsors from "@/assets/jesus-votara-sponsors.jpg";
+import jesusVenue from "@/assets/jesus-votara-venue.jpg";
 
 type GalleryItem = {
   type: "image" | "video";
@@ -63,6 +67,15 @@ const galleries: Record<number, { archive: string; items: GalleryItem[] }> = {
       { type: "image", src: garagemJornada, label: "Jornada de 4 Dias · Problema → Demo Day", span: "col-span-2 md:col-span-2 md:row-span-2" },
     ],
   },
+  5: {
+    archive: "Field Archive · Jesus Votará · 42 SP × Replit × ChatGPT",
+    items: [
+      { type: "image", src: jesusLogo, label: "Jesus Votará · Brand", span: "col-span-2 md:col-span-2 md:row-span-2" },
+      { type: "image", src: jesusTeam, label: "Champions · Equipe Jesus Votará", span: "md:col-span-2" },
+      { type: "image", src: jesusSponsors, label: "42 São Paulo · Replit · ChatGPT", span: "md:col-span-2" },
+      { type: "image", src: jesusVenue, label: "Hackathon floor · 42 São Paulo", span: "col-span-2 md:col-span-4 md:row-span-2" },
+    ],
+  },
 };
 
 const meta = [
@@ -71,6 +84,7 @@ const meta = [
   { id: "03", accent: "violet" as const, stack: ["AI", "EdTech", "Accessibility", "Lovable"] },
   { id: "04", accent: "cyan" as const, stack: ["Blockchain", "Health Data", "Interoperability"] },
   { id: "05", accent: "violet" as const, stack: ["Bootcamp", "Pitch", "Fundraising", "Poli-USP"] },
+  { id: "06", accent: "cyan" as const, stack: ["AI", "CivicTech", "Public Data", "Hackathon"] },
 ];
 
 const accentClasses = {

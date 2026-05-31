@@ -112,6 +112,13 @@ export const translations = {
           solution: "Latin America's largest university entrepreneurship bootcamp — from problem ideation and MVP to traction and Demo Day.",
           impact: "Selected participant — pitching to investors (Atlantico, Norte Ventures, Indicator, Poli Angels).",
         },
+        {
+          name: "Jesus Votará — 42 SP × Replit × ChatGPT",
+          tag: "CivicTech × AI · Hackathon Champions",
+          problem: "Voters lack a clear, accessible way to see whether their representatives' votes align with the values they claim to defend.",
+          solution: "An app that uses AI and public voting data to analyze whether parliamentarians' votes align with the principles and values taught by Jesus Christ.",
+          impact: "Champions at the 42 São Paulo × Replit × ChatGPT Hackathon.",
+        },
       ],
     },
     now: {
@@ -298,6 +305,13 @@ export const translations = {
           problem: "Founders universitários precisam de um caminho real da ideia ao pitch para investidores.",
           solution: "Maior bootcamp universitário de empreendedorismo da América Latina — da ideação e MVP até tração e Demo Day.",
           impact: "Participante selecionado — pitch para investidores (Atlantico, Norte Ventures, Indicator, Poli Angels).",
+        },
+        {
+          name: "Jesus Votará — 42 SP × Replit × ChatGPT",
+          tag: "CivicTech × IA · Campeões do Hackathon",
+          problem: "Eleitores não têm uma forma clara e acessível de saber se as votações dos seus representantes estão alinhadas aos valores que dizem defender.",
+          solution: "Criamos o app Jesus Votará, uma plataforma que usa Inteligência Artificial e dados públicos para analisar se as votações dos parlamentares estão alinhadas aos princípios e valores ensinados por Jesus Cristo.",
+          impact: "Campeões do Hackathon 42 São Paulo × Replit × ChatGPT.",
         },
       ],
     },
