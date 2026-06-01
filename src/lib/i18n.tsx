@@ -147,9 +147,9 @@ export const translations = {
           { year: "2026", title: "Harvard World Finals", desc: "Representing Brazil — 120 teams, 41 countries." },
           { year: "2026", title: "START SP — Pre-Incubation", desc: "Selected venture moves into accelerator." },
           { year: "2026", title: "SEBRAE Startups — Top 12", desc: "Recognized among top early-stage Brazilian builders." },
+          { year: "2026", title: "Poli-USP Garage + Supernova", desc: "Engineering home base for the next phase." },
           { year: "2026", title: "Flux AI — Zero to Hero Hackathon", desc: "2nd place. AI-powered cash-flow forecasting for real estate developers." },
           { year: "2026", title: "Jesus Votará — 42 SP Hackathon", desc: "Champions. AI + public data analyzing parliamentarians' votes against Christian values." },
-          { year: "Next", title: "Poli-USP Garage + Supernova", desc: "Engineering home base for the next phase." },
         ],
     },
     skills: {
