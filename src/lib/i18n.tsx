@@ -147,9 +147,9 @@ export const translations = {
           { year: "2026", title: "Harvard World Finals", desc: "Representing Brazil — 120 teams, 41 countries." },
           { year: "2026", title: "START SP — Pre-Incubation", desc: "Selected venture moves into accelerator." },
           { year: "2026", title: "SEBRAE Startups — Top 12", desc: "Recognized among top early-stage Brazilian builders." },
+          { year: "2026", title: "Poli-USP Garage + Supernova", desc: "Engineering home base for the next phase." },
           { year: "2026", title: "Flux AI — Zero to Hero Hackathon", desc: "2nd place. AI-powered cash-flow forecasting for real estate developers." },
           { year: "2026", title: "Jesus Votará — 42 SP Hackathon", desc: "Champions. AI + public data analyzing parliamentarians' votes against Christian values." },
-          { year: "Next", title: "Poli-USP Garage + Supernova", desc: "Engineering home base for the next phase." },
         ],
     },
     skills: {
@@ -343,9 +343,9 @@ export const translations = {
         { year: "2026", title: "Mundial Harvard", desc: "Representando o Brasil — 120 equipes, 41 países." },
         { year: "2026", title: "START SP — Pré-Incubação", desc: "Venture selecionado entra na aceleradora." },
         { year: "2026", title: "SEBRAE Startups — Top 12", desc: "Reconhecido entre os top builders brasileiros early-stage." },
+        { year: "2026", title: "Poli-USP Garage + Supernova", desc: "Base de engenharia para a próxima fase." },
         { year: "2026", title: "Flux AI — Zero to Hero Hackathon", desc: "2º lugar. Previsão de fluxo de caixa com IA para incorporadoras." },
         { year: "2026", title: "Jesus Votará — Hackathon 42 SP", desc: "Campeões. IA + dados públicos analisando votações dos parlamentares contra valores cristãos." },
-        { year: "Próximo", title: "Poli-USP Garage + Supernova", desc: "Base de engenharia para a próxima fase." },
       ],
     },
     skills: {
