@@ -343,9 +343,9 @@ export const translations = {
         { year: "2026", title: "Mundial Harvard", desc: "Representando o Brasil — 120 equipes, 41 países." },
         { year: "2026", title: "START SP — Pré-Incubação", desc: "Venture selecionado entra na aceleradora." },
         { year: "2026", title: "SEBRAE Startups — Top 12", desc: "Reconhecido entre os top builders brasileiros early-stage." },
+        { year: "2026", title: "Poli-USP Garage + Supernova", desc: "Base de engenharia para a próxima fase." },
         { year: "2026", title: "Flux AI — Zero to Hero Hackathon", desc: "2º lugar. Previsão de fluxo de caixa com IA para incorporadoras." },
         { year: "2026", title: "Jesus Votará — Hackathon 42 SP", desc: "Campeões. IA + dados públicos analisando votações dos parlamentares contra valores cristãos." },
-        { year: "Próximo", title: "Poli-USP Garage + Supernova", desc: "Base de engenharia para a próxima fase." },
       ],
     },
     skills: {
