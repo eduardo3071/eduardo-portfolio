@@ -414,8 +414,6 @@ export function LangProvider({ children }: { children: ReactNode }) {
     const stored = typeof window !== "undefined" ? (localStorage.getItem("lang") as Lang | null) : null;
     if (stored === "en" || stored === "pt") {
       setLangState(stored);
-    } else if (typeof navigator !== "undefined" && navigator.language?.toLowerCase().startsWith("pt")) {
-      setLangState("pt");
     }
   }, []);
 
